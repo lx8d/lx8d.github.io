@@ -1,0 +1,1 @@
+var imgs=document.getElementsByTagName("img");for(var i=0,l=imgs.length;i<l;i++){var url=imgs[i].getAttribute("data-src");if(!imgs[i].src&&url){imgs[i].src=url}}
