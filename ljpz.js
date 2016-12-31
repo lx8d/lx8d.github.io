@@ -2,16 +2,16 @@
 var ljdz = "http://lx8d-10005973.file.myqcloud.com/"
 //@以上为设置地址，外部URL绝对地址后面必须有"/"站内链接留空即可。
 document.getElementById("sy").href="index.html#";
-document.getElementById("xpyk").href="index.html?pq=http://p.u9yy.com/cmp/cmp.swf?url=config_u9yy.php&skins="+ljdz+"gq/dy.swf&lists=http://list.u9yy.com/dy/2016.xml";
-document.getElementById("cqdy").href="index.html?pq=qt&id=1&lists=1.xml,2.xml";
-document.getElementById("xdsj").href="index.html?pq=qt&id=2&lists=1.xml";
-document.getElementById("yszh").href="index.html?pq=2q&skins="+ljdz+"gq/dy.swf&lists=dy/dy";
-document.getElementById("dszb").href="index.html?pq=qt&id=4&lists=1.xml,2.xml,3.xml,4.xml,5.xml,6.xml,7.xml,8.xml,9.xml,10.xml";
-document.getElementById("zyyl").href="index.html?pq=qt&id=9&lists=1.xml,http://api.pronvod.com/zy/sohu.php";
-document.getElementById("gxsp").href="index.html?pq=qt&id=3&lists=1.xml";
-document.getElementById("rwsp").href="index.html?pq=qt&id=5&lists=1.xml,http://api.pronvod.com/mv/youku.php";
-document.getElementById("yxzb").href="index.html?pq=2q&skins="+ljdz+"gq/dy.swf&lists=zy/youxi";
-//@以上为页面导航栏链接地址。
+
+document.getElementById("cqdy").href="index.html?pq=qt&lists=1.xml,2.xml&id=1";
+document.getElementById("xdsj").href="index.html?pq=qt&lists=1.xml&id=2";
+document.getElementById("yszh").href="index.html?pq=2q&lists=dy/dy&id=0&skins="+ljdz+"gq/dy.swf";
+document.getElementById("dszb").href="index.html?pq=qt&lists=1.xml,2.xml,3.xml,4.xml,5.xml,6.xml,7.xml,8.xml,9.xml,10.xml&id=4";
+document.getElementById("zyyl").href="index.html?pq=qt&lists=1.xml,http://api.pronvod.com/zy/sohu.php&id=9";
+document.getElementById("gxsp").href="index.html?pq=qt&lists=1.xml&id=3";
+document.getElementById("rwsp").href="index.html?pq=qt&lists=1.xml,http://api.pronvod.com/mv/youku.php&id=5";
+document.getElementById("yxzb").href="index.html?pq=2q&lists=zy/youxi&id=0&skins="+ljdz+"gq/dy.swf";
+//@以上为页面导航栏链接地址。参数排序为pg、lists、id（此三个必有，id参数为tv6080.com设，其他站为0，为了模式改变后导航栏显示）、skins（外部配置本站皮肤、省略则显示原站皮肤）
 document.getElementById("ico").href= ljdz+"gq/lx8d.ico";
 document.getElementById("buju").href= ljdz+"gq/buju.css";
 document.getElementById("pubuliu").href= ljdz+"gq/pubuliu.css";
@@ -39,11 +39,12 @@ document.write("<scr"+"ipt type=\"text/javascript\" src=\""+ljdz+"gq/pubuliu.js\
 };
 var Request=new QueryString();
 pq=Request["pq"];
-id=Request["id"];
 lists=Request["lists"];
+id=Request["id"];
+skins=Request["skins"];
 bf=Request["bf"];
 no=Request["no"];
-if(!pq&&!id&&!lists&&!bf&&!no){
+if(!pq&&!lists&&!id&&!skins&&!bf&&!no){
 document.getElementById("home2").innerHTML="";
 document.getElementById("jiazai").innerHTML="";
     }
