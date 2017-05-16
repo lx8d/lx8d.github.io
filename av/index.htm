@@ -1,0 +1,49 @@
+﻿<html>
+<head>
+<title id=bt>高清新片发布站_WWW.XINPIAN.GQ</title>
+<meta name="keywords" content="高清新片、电影新片、新片发布、最新电影" />
+<meta name="description" content="高清新片发布站_WWW.XINPIAN.GQ 第一时间为您提供高清新近电影大片，无需下载任何播放器即可在线免费观看！" />
+<meta http-equiv="Content-Type"content="text/html;charset=utf-8"/>
+<style type="text/css">html, body { height:100%; margin:0; padding:0; overflow:hidden; text-align:center;}</style>
+</head>
+<body>
+  <div id="player" style="width:100%;height:100%;">
+    <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+	    <td align="center" valign="middle">
+		   爱情动作片（1-4404集）<br>
+           <p>第 <input id='PageNo' size='4'> 集 <button onclick="GoTo()">雄起</button></p>
+		   <script>function GoTo(){var PageNo=document.getElementById("PageNo").value;var url="";url='index.htm?id='+PageNo;window.open(url,'_blank')}</script>
+		   <p align="center" style="color: #000000;font-size:10px;line-height:10px;">重要声明:所有影片均来源于其他影视站点，本站不制作和发布电影片源，不对内容的合法性承担任何责任！</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+<script language=JavaScript>
+function QueryString(){
+	var name,value,i;
+	var str=location.href;
+	var num=str.indexOf("?");
+	str=str.substr(num+1);
+	var arrtmp=str.split("&");
+	for(i=0;i<arrtmp.length;i++){
+		num=arrtmp[i].indexOf("=");
+		if(num>0){
+			name=arrtmp[i].substring(0,num);
+			value=arrtmp[i].substr(num+1);
+			this[name]=value
+					
+		}
+	}
+};
+var Request=new QueryString();
+id=Request["id"];
+var url="http://data1.cache.directory/media/videos/iphone/"+id+".mp4";
+if(!id){}
+else{
+	document.getElementById("bt").innerHTML = '【爱情动作片第'+id+'集】高清新片发布站_WWW.XINPIAN.GQ';
+	document.getElementById("player").innerHTML = '<embed src="http://data1.cache.directory/media/videos/iphone/'+id+'.mp4" type="audio/mpeg" width="100%" height="100%" ></embed>';
+}
+</script>
+</body>
+</html>
